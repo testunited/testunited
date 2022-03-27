@@ -1,25 +1,7 @@
 {
 	"folders": [
 		{
-			"path": "testunited-dev-util"
-		},
-		{
-			"path": "testunited-web-api"
-		},
-		{
-			"path": "testunited-mysql"
-		},
-		{
-			"path": "testunited-web-ui"
-		},
-		{
-			"path": "testunited-deploy"
-		},
-		{
-			"path": "testunited-api"
-		},
-		{
-			"path": "testunited-launcher"
+			"path": "."
 		}
 	],
 	"settings": {
