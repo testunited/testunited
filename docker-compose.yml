@@ -47,5 +47,5 @@ services:
     environment:
       - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
     volumes:
-      - ${PWD}/../testunited-mysql/src/main/mysql/init:/docker-entrypoint-initdb.d
-      - ${PWD}/../testunited-mysql/data:/var/lib/mysql
+      - ${PWD}/testunited-mysql/src/main/mysql/init:/docker-entrypoint-initdb.d
+      - ${PWD}/testunited-mysql/data:/var/lib/mysql

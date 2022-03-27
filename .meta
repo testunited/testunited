@@ -1,6 +1,6 @@
 {
     "projects": {
-        "testunited-api":"git@github.com:testunited/testunited-api.git",
+        "testunited-sdk":"git@github.com:testunited/testunited-sdk.git",
         "testunited-web-api":"git@github.com:testunited/testunited-web-api.git",
         "testunited-web-ui":"git@github.com:testunited/testunited-web-ui.git",
         "testunited-mysql":"git@github.com:testunited/testunited-mysql.git",
