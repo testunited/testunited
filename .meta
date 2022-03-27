@@ -1,0 +1,10 @@
+{
+    "projects": {
+        "testunited-api":"git@github.com:testunited/testunited-api.git",
+        "testunited-web-api":"git@github.com:testunited/testunited-web-api.git",
+        "testunited-web-ui":"git@github.com:testunited/testunited-web-ui.git",
+        "testunited-mysql":"git@github.com:testunited/testunited-mysql.git",
+        "testunited-deploy":"git@github.com:testunited/testunited-deploy.git",
+        "testunited-launcher":"git@github.com:testunited/testunited-launcher.git"
+    }
+}

@@ -1,0 +1,51 @@
+version: '3.8'
+services:
+  web-ui:
+#    network_mode: host
+    image: testunited/testunited-web-ui:latest
+    ports:
+      - 9011:80
+    environment:
+      - server.port=80
+    depends_on:
+      - web-api
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 25M
+        reservations:
+          cpus: '0.25'
+          memory: 20M
+  web-api:
+#    network_mode: host
+    image: testunited/testunited-web-api:latest
+    ports:
+      - 9001:80
+    environment:
+      - server.port=80
+      - spring.jpa.hibernate.ddl-auto=${spring_jpa_hibernate_ddl_auto}
+      - spring.datasource.url=${spring_datasource_url}
+      - spring.datasource.username=${spring_datasource_username}
+      - spring.datasource.password=${spring_datasource_password}
+      - LOGBACK_LOG_LEVEL=INFO
+    depends_on:
+      - mysql
+    deploy:
+      resources:
+        limits:
+          cpus: '1'
+          memory: 250M
+        reservations:
+          cpus: '0.25'
+          memory: 200M
+  mysql:
+#    network_mode: host
+    image: mysql:8
+    ports:
+      - 3306:3306
+    environment:
+      - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
+    volumes:
+      - ${PWD}/../testunited-mysql/src/main/mysql/init:/docker-entrypoint-initdb.d
+      - ${PWD}/../testunited-mysql/data:/var/lib/mysql
